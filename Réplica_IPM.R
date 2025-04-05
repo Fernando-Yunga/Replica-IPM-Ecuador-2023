@@ -517,8 +517,6 @@ Pobr_Multi <- Desagregaciones %>%
       mutate(Indicador = .x, Categorías = as.character(!!sym(.x))) %>%
       select(-all_of(.x))
   )
-# NOTA: Para obtener los indicadores: TPM, TPEM, y A. 
-# Únicamente en la línea del código 512, cambiar IPM por cualquiera de los indicadores.
 
 Pobr_Multi <- Pobr_Multi %>%
   mutate(
