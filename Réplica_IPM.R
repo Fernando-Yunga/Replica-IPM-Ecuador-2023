@@ -515,7 +515,7 @@ Pobr_Multi <- Desagregaciones %>%
                      A = survey_mean(A, na.rm = TRUE),
                      IPM = survey_mean(IPM, na.rm = TRUE)))) %>%
       mutate(Indicador = .x, Categorías = as.character(!!sym(.x))) %>%
-      select(-.x)
+      select(-all_of(.x))
   )
 # NOTA: Para obtener los indicadores: TPM, TPEM, y A. 
 # Únicamente en la línea del código 512, cambiar IPM por cualquiera de los indicadores.
